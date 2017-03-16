@@ -18,5 +18,5 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^create/(?P<slug>[\w_-]+)/', views.create, name='create_file'),
+    url(r'^$', views.upload_file, name='uploadFile'),
 ]
