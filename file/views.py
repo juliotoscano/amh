@@ -8,7 +8,7 @@ def upload_file(request):
     if request.method == 'POST':
         form = updateXML(request.POST,request.FILES)
         if form.is_valid():
-            HttpResponseRedirect(reverse('core:index'))
+            return HttpResponseRedirect(reverse('core:index'))
         else:
             pass
     else:
