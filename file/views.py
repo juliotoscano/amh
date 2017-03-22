@@ -20,8 +20,6 @@ def upload_file(request):
                         destination.write(chunk)
             process(x)
         return HttpResponse("Files Uploaded!")
-
-        
         #form = updateXML(request.POST,request.FILES)
         #if form.is_valid():
         #   listfiles = request.FILES.getlist("lot")
@@ -32,4 +30,4 @@ def upload_file(request):
         #  return HttpResponseRedirect(reverse('core:index'))
     else:
         form = updateXML()
-    return render(request,'create_file.html',{'form':form})
+    return render(request,'uploadXml.html',{'form':form})
