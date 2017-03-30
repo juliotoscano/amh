@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Thu Mar 23 2017 09:34:40 GMT-0300 (BRT) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="ans:mensagemTISS">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="ans:cabecalho">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="ans:identificacaoTransacao">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="ans:tipoTransacao" type="xs:string"></xs:element>
+                                                               <xs:element name="ans:sequencialTransacao" type="xs:int"></xs:element>
+                                                               <xs:element name="ans:dataRegistroTransacao" type="xs:date"></xs:element>
+                                                               <xs:element name="ans:horaRegistroTransacao" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="ans:origem">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="ans:identificacaoPrestador">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="ans:CNPJ" type="xs:int"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="ans:destino">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="ans:registroANS" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="ans:versaoPadrao" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="ans:prestadorParaOperadora">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="ans:loteGuias">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="ans:numeroLote" type="xs:int"></xs:element>
+                                                               <xs:element name="ans:guiasTISS">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="ans:guiaSP-SADT" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="ans:cabecalhoGuia">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:registroANS" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="ans:numeroGuiaPrestador" type="xs:int"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="ans:dadosAutorizacao">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:dataAutorizacao" type="xs:date"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="ans:dadosBeneficiario">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:numeroCarteira" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="ans:atendimentoRN" type="xs:string"></xs:element>
+                                                                                                                     <xs:element name="ans:nomeBeneficiario" type="xs:string"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="ans:dadosSolicitante">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:contratadoSolicitante">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="ans:cnpjContratado" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ans:nomeContratado" type="xs:string"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                                     <xs:element name="ans:profissionalSolicitante">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="ans:nomeProfissional" type="xs:string"></xs:element>
+                                                                                                                                       <xs:element name="ans:conselhoProfissional" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ans:numeroConselhoProfissional" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ans:UF" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ans:CBOS" type="xs:int"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="ans:dadosSolicitacao">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:dataSolicitacao" type="xs:date"></xs:element>
+                                                                                                                     <xs:element name="ans:caraterAtendimento" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="ans:indicacaoClinica" type="xs:string"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="ans:dadosExecutante">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:contratadoExecutante">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="ans:codigoPrestadorNaOperadora" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ans:nomeContratado" type="xs:string"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                                     <xs:element name="ans:CNES" type="xs:int"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="ans:dadosAtendimento">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:tipoAtendimento" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="ans:indicacaoAcidente" type="xs:int"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="ans:procedimentosExecutados">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:procedimentoExecutado">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="ans:dataExecucao" type="xs:date"></xs:element>
+                                                                                                                                       <xs:element name="ans:procedimento">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element name="ans:codigoTabela" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:codigoProcedimento" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:descricaoProcedimento" type="xs:string"></xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                       <xs:element name="ans:quantidadeExecutada" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ans:viaAcesso" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ans:reducaoAcrescimo" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ans:valorUnitario" type="xs:double"></xs:element>
+                                                                                                                                       <xs:element name="ans:valorTotal" type="xs:double"></xs:element>
+                                                                                                                                       <xs:element name="ans:equipeSadt">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element name="ans:grauPart" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:codProfissional">
+                                                                                                                                                               <xs:complexType>
+                                                                                                                                                                     <xs:sequence>
+                                                                                                                                                                           <xs:element name="ans:cpfContratado" type="xs:int"></xs:element>
+                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                               </xs:complexType>
+                                                                                                                                                         </xs:element>
+                                                                                                                                                         <xs:element name="ans:nomeProf" type="xs:string"></xs:element>
+                                                                                                                                                         <xs:element name="ans:conselho" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:numeroConselhoProfissional" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:UF" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:CBOS" type="xs:int"></xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="ans:outrasDespesas">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:despesa" maxOccurs="unbounded">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="ans:codigoDespesa" type="xs:int"></xs:element>
+                                                                                                                                       <xs:element name="ans:servicosExecutados">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element name="ans:dataExecucao" type="xs:date"></xs:element>
+                                                                                                                                                         <xs:element name="ans:codigoTabela" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:codigoProcedimento" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:quantidadeExecutada" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:unidadeMedida" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:reducaoAcrescimo" type="xs:int"></xs:element>
+                                                                                                                                                         <xs:element name="ans:valorUnitario" type="xs:double"></xs:element>
+                                                                                                                                                         <xs:element name="ans:valorTotal" type="xs:double"></xs:element>
+                                                                                                                                                         <xs:element name="ans:descricaoProcedimento" type="xs:string"></xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                                   <xs:element name="ans:valorTotal">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="ans:valorProcedimentos" type="xs:double"></xs:element>
+                                                                                                                     <xs:element name="ans:valorDiarias" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="ans:valorTaxasAlugueis" type="xs:double"></xs:element>
+                                                                                                                     <xs:element name="ans:valorMateriais" type="xs:double"></xs:element>
+                                                                                                                     <xs:element name="ans:valorMedicamentos" type="xs:double"></xs:element>
+                                                                                                                     <xs:element name="ans:valorOPME" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="ans:valorGasesMedicinais" type="xs:int"></xs:element>
+                                                                                                                     <xs:element name="ans:valorTotalGeral" type="xs:double"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="ans:epilogo">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="ans:hash" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+                     <xs:attribute name="xmlns" type="xs:string"></xs:attribute>
+                     <xs:attribute name="xmlns:ans" type="xs:string"></xs:attribute>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
