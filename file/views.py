@@ -4,6 +4,7 @@ from .forms import updateXML
 from django.urls import reverse
 from .ElementTree import ElementTree as ET
 from django.core.files.uploadedfile import UploadedFile
+
 import os
 uploadfiles = os.path.dirname(__file__)
 #from django.core.files import File
@@ -31,18 +32,3 @@ def upload_file(request):
     else:
         form = updateXML()
     return render(request,'uploadXml.html',{'form':form})
-
-def readXSD(request):
-    #carregar arquivos xml ou xsd
-    tree = ET.parse('nome_arquivo')
-    root = tree.getroot()
-    #Raiz começa no primeiro element de fato: Ex: mensagemTISS
-    root = root.find('{http://www.w3.org/2001/XMLSchema}element')
-    if root[0].tag == "{http://www.w3.org/2001/XMLSchema}complexType":
-        #Elementos dentro desse no relacionamento direto com o no acima.
-        complexType = root[0]
-        sequence = complexType[0]
-        for x in root.findall('{http://www.w3.org/2001/XMLSchema}element'): 
-            print(x.attrib)
-    else:
-        pass
