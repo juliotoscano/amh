@@ -1,66 +1,26 @@
-<!DOCTYPE html>
-{% load static i18n %}
-{% get_current_language as LANGUAGE_CODE %}
+{% extends 'base.html' %}
 
-<html>
-    <head>
-        <title>{{ title }} | AMH</title>
-        <meta http-equiv="Cache-Control" content="no-cache, no-store" />
-        <!-- Jquery -->
-        <script type="text/javascript" src="{% static 'js/jquery-3.2.0.min.js'%}"></script>
-        <!-- Bootstrap -->
-        
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type="text/css" />
-        <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css'%}" type="text/css" />
-        <!-- Materialize -->
-        <link rel="stylesheet" href="{% static 'css/materialize.min.css'%}" type="text/css" />
-        <!-- Font-awesome -->
-        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}" type="text/css" />
-        <!-- core styles and javascript -->
-        <script type="text/javascript" src="{% static 'js/amh.js'%}"></script>
-        <link rel="stylesheet" href="{% static 'css/amh.css'%}" type="text/css" />
-        <!-- applications styles and javascript -->
-        {% block style %}{% endblock %}
-        {% block javascript %}{% endblock %}
-    </head>
-    <body>
-        <div class="site-wrapper">
-    
-          <div class="site-wrapper-inner">
-        
-            <div class="cover-container">
-        
-              <div class="inner cover">
-                <h2 class="cover-heading title">Auditoria Médico Hospitalar <i class="fa fa-hospital-o" aria-hidden="true"></i></h2>
-                <form> 
-                  <div class="input-field col-md-8 offset-md-2">
-                    <input placeholder="Login"  id="login"  type="text" class="validate"/>
-                  </div>
-                  <div class="input-field col-md-8 offset-md-2">
-                    <input placeholder="Senha" id="senha"  type="password" class="validate"/>
-                  </div>
-                  <div class="input-field col-md-8 offset-md-2">
-                    <input type=checkbox id="remember"/>
-                    <label for="remember">Lembrar-me</label>
-                  </div>
-                  <div class="input-field col-md-8 offset-md-2 lSubmit">
-                    <a type="submit" class="waves-effect waves-light btn">Fazer Login</a>
-                  </div>
-                </form>
+{% load static i18n %}
+{% load widget_tweaks %}
+
+{% block container %}
+
+<div class="row">
+    <div id="cardmain" class="card text-center" >
+      <div class="card-header">
+        <h4 class="card-title">Auditoria Médico Hospitalar</h4>
+      </div>
+      <div class="card-block">
+          <div class="row">
+              <div class="col-md-6">
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Histórico de auditorias</button>
               </div>
-        
-            </div>
-        
+              <div class="col-md-6">
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Analisar Guias</button>
+              </div>
           </div>
-        
-        </div>
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script type="text/javascript" src="{% static 'js/ie10-viewport-bug-workaround.js'%}"></script>
-    </body>
-</html>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

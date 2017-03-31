@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<html>
+    <head>
+        <title>{{ title }} | AMH</title>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store" />
+        <!-- Jquery -->
+        <script type="text/javascript" src="{% static 'js/jquery-3.2.0.min.js'%}"></script>
+        <!-- Bootstrap -->
+        
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css'%}" type="text/css" />
+        <!-- Materialize -->
+        <link rel="stylesheet" href="{% static 'css/materialize.min.css'%}" type="text/css" />
+        <!-- Font-awesome -->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}" type="text/css" />
+        <!-- core styles and javascript -->
+        <script type="text/javascript" src="{% static 'js/amh.js'%}"></script>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
+        <!-- applications styles and javascript -->
+        {% block style %}{% endblock %}
+        {% block javascript %}{% endblock %}
+    </head>
+    <body>
+        <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">AMH</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="badges.html">perfil do usuário</a></li>
+            <li><a href="collapsible.html">Sair</a></li>
+          </ul>
+        </div>
+        </nav>
+        
+        {% block container %}
+        {% endblock %}
+        
+        <footer class="page-footer">
+            <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Suporte</h5>
+                <p class="grey-text text-lighten-4">Entre em contato conosco agora mesmo e tire suas dúvidas.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">A Empresa</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Endereço físico da empresa</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">número para contato</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">Site comercial da empresa</a>
+            </div>
+          </div>
+        </footer>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script type="text/javascript" src="{% static 'js/ie10-viewport-bug-workaround.js'%}"></script>
+    </body>
+</html>
