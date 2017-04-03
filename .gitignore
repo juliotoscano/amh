@@ -1,0 +1,19 @@
+#Para todos os arquivos pycache
+__pycache__/
+#Para todos os arquivos xsd
+*.xsd
+#Todos os arquivos de migratição
+migrations/
+#Todos os arquivos uploaded
+upload/
+
+# Created by https://www.gitignore.io/api/visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# End of https://www.gitignore.io/api/visualstudiocode
