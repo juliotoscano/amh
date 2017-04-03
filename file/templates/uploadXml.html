@@ -1,6 +1,28 @@
-<h2>Here is the create form file</h2>
-<form method="post" action="" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="submit">
-</form>
+
+{% extends 'base.html' %}
+
+{% load static i18n %}
+{% load widget_tweaks %}
+
+{% block container %}
+
+<div class="row">
+    <div id="cardmain" class="card text-center" style="margin-top:50px;">
+      <div class="card-header">
+        <h4 class="card-title">Importar arquivos xml</h4>
+      </div>
+      <div class="card-block">
+          <div class="row">
+              <div class="col-md-12">
+                <form method="post" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form}}
+                    <input type="submit" value="submit">
+                </form>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

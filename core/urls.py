@@ -21,5 +21,5 @@ from . import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^entrar/', login,{'template_name':'login.html'}, name='login'),
-    url(r'^sair/', logout,{'next_page':'index.html'}, name='logout'),
+    url(r'^sair/', logout,{'next_page':'core:index'}, name='logout'),
 ]

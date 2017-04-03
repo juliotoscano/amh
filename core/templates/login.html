@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static i18n %}
+{% load widget_tweaks %}
 {% get_current_language as LANGUAGE_CODE %}
 
 <html>
@@ -32,19 +33,35 @@
         
               <div class="inner cover">
                 <h2 class="cover-heading title">Auditoria Médico Hospitalar <i class="fa fa-hospital-o" aria-hidden="true"></i></h2>
-                <form> 
-                  <div class="input-field col-md-8 offset-md-2">
-                    <input placeholder="Login"  id="login"  type="text" class="validate"/>
+                <form method="post"> 
+                  {% csrf_token%}
+                  {% for error in form.non_field_errors %}
+                  <div class="alert alert-danger">
+                    {{ error }}
                   </div>
-                  <div class="input-field col-md-8 offset-md-2">
-                    <input placeholder="Senha" id="senha"  type="password" class="validate"/>
+                  {% endfor %}
+                  <div class="input-field {% if form.username.erros %} data-error {% endif %}col-md-8 offset-md-2">
+                    {% render_field form.username placeholder="Login" id="login" class="validate" %}
+                    {% for error in form.username.errors %}
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Oh snap!</strong> {{ error }}
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <div class="input-field {%if form.password.errors %} data-error {% endif %}col-md-8 offset-md-2">
+                    {% render_field form.password placeholder="Senha" id="senha" class="validate" %}
+                    {% for error in form.password.errors %}
+                    <div class="alert alert-danger" role="alert">
+                      <strong>Oh snap!</strong> {{ error }}
+                    </div>
+                    {% endfor %}
                   </div>
                   <div class="input-field col-md-8 offset-md-2">
                     <input type=checkbox id="remember"/>
                     <label for="remember">Lembrar-me</label>
                   </div>
                   <div class="input-field col-md-8 offset-md-2 lSubmit">
-                    <a type="submit" class="waves-effect waves-light btn">Fazer Login</a>
+                    <button type="submit" class="waves-effect waves-light btn">Fazer Login</button>
                   </div>
                 </form>
               </div>
