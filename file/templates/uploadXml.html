@@ -14,10 +14,19 @@
       <div class="card-block">
           <div class="row">
               <div class="col-md-12">
-                <form method="post" action="" enctype="multipart/form-data">
+                <form method="post" action="" enctype="multipart/form-data" class="horizontal-form" >
                     {% csrf_token %}
-                    {{form}}
-                    <input type="submit" value="submit">
+                    <div class="col-md-12">
+                        {% render_field form.lot class="file-field input-field" placeholder="Upload one or more files"%}
+                        {% for error in form.username.errors %}
+                        <div class="alert alert-danger" role="alert">
+                        <strong>Oh snap!</strong> {{ error }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-12" style="margin-top:30px;">
+                        <input class="btn" type="submit" value="submit">
+                    </div>
                 </form>
               </div>
           </div>
