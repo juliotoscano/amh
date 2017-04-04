@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+{% load widget_tweaks %}
+
+{% block container %}
+        <div class="card-stats">
+            <div class="row">
+            <div class="col s12 m6 l3">
+                <div class="card" style="margin-top:50px;">
+                    <div class="card-content  green white-text">
+                        <p class="card-stats-title">Base cobrados corretamente</p>
+                        <h4 class="card-stats-number">19.090</h4>
+                    </div>
+                    <div class="card-action  green darken-2" style="text-align: right;">
+                        <p>Analisar relatorio <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card" style="margin-top:50px;">
+                    <div class="card-content pink lighten-1 white-text">
+                        <p class="card-stats-title">Base a menor</p>
+                        <h4 class="card-stats-number">11.943.977.26</h4>
+                    </div>
+                    <div class="card-action  pink darken-2" style="text-align: right;">
+                        <p>Analisar relatorio <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card" style="margin-top:50px;">
+                    <div class="card-content blue-grey white-text">
+                        <p class="card-stats-title">Base cobrados a maior (Risco de glosa)</p>
+                        <h4 class="card-stats-number">3823</h4>
+                    </div>
+                    <div class="card-action blue-grey darken-2" style="text-align: right;">
+                        <p>Analisar relatorio <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+            
+        </div>
+        <div class="row" style="margin-bottom:150px;">
+        <table id="data-table-simple" class="responsive-table display dataTable" cellspacing="0" role="grid" aria-describedby="data-table-simple_info">
+            <thead>
+                <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending" style="width: 155px;">Arquivo XML</th><th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 251px;">Data transação</th><th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 114px;">Guia operadora</th><th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 48px;">Guia prestador</th><th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 100px;">Despesa procedimento</th><th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 100px;">Procedimento chave</th></tr>
+            </thead>
+         
+            <tbody>
+            <tr role="row" class="odd">
+                    <td class="sorting_1">Airi Satou</td>
+                    <td class="">Accountant</td>
+                    <td>Tokyo</td>
+                    <td>33</td>
+                    <td>2008/11/28</td>
+                    <td>$162,700</td>
+                </tr><tr role="row" class="even">
+                    <td class="sorting_1">Angelica Ramos</td>
+                    <td class="">Chief Executive Officer (CEO)</td>
+                    <td>London</td>
+                    <td>47</td>
+                    <td>2009/10/09</td>
+                    <td>$1,200,000</td>
+                </tr><tr role="row" class="odd">
+                    <td class="sorting_1">Ashton Cox</td>
+                    <td class="">Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                </tr><tr role="row" class="even">
+                    <td class="sorting_1">Bradley Greer</td>
+                    <td class="">Software Engineer</td>
+                    <td>London</td>
+                    <td>41</td>
+                    <td>2012/10/13</td>
+                    <td>$132,000</td>
+                </tr><tr role="row" class="odd">
+                    <td class="sorting_1">Brenden Wagner</td>
+                    <td class="">Software Engineer</td>
+                    <td>San Francisco</td>
+                    <td>28</td>
+                    <td>2011/06/07</td>
+                    <td>$206,850</td>
+                </tr><tr role="row" class="even">
+                    <td class="sorting_1">Brielle Williamson</td>
+                    <td class="">Integration Specialist</td>
+                    <td>New York</td>
+                    <td>61</td>
+                    <td>2012/12/02</td>
+                    <td>$372,000</td>
+                </tr><tr role="row" class="odd">
+                    <td class="sorting_1">Bruno Nash</td>
+                    <td class="">Software Engineer</td>
+                    <td>London</td>
+                    <td>38</td>
+                    <td>2011/05/03</td>
+                    <td>$163,500</td>
+                </tr><tr role="row" class="even">
+                    <td class="sorting_1">Caesar Vance</td>
+                    <td class="">Pre-Sales Support</td>
+                    <td>New York</td>
+                    <td>21</td>
+                    <td>2011/12/12</td>
+                    <td>$106,450</td>
+                </tr><tr role="row" class="odd">
+                    <td class="sorting_1">Cara Stevens</td>
+                    <td class="">Sales Assistant</td>
+                    <td>New York</td>
+                    <td>46</td>
+                    <td>2011/12/06</td>
+                    <td>$145,600</td>
+                </tr><tr role="row" class="even">
+                    <td class="sorting_1">Cedric Kelly</td>
+                    <td class="">Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2012/03/29</td>
+                    <td>$433,060</td>
+                </tr></tbody>
+          </table>
+        
+        </div>
+        
+
+
+
+{% endblock %}
