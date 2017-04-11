@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 {% load static i18n %}
 {% get_current_language as LANGUAGE_CODE %}
-
 <html>
     <head>
         <title>{{ title }} | AMH</title>
-        <meta http-equiv="Cache-Control" content="no-cache, no-store" />
         <!-- Jquery -->
         <script type="text/javascript" src="{% static 'js/jquery-3.2.0.min.js'%}"></script>
         <!-- Bootstrap -->
@@ -18,12 +16,13 @@
         <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}" type="text/css" />
         <!-- core styles and javascript -->
         <script type="text/javascript" src="{% static 'js/amh.js'%}"></script>
-        <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
         <!-- applications styles and javascript -->
         {% block style %}{% endblock %}
         {% block javascript %}{% endblock %}
+        <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
     </head>
     <body>
+      
         <nav>
         <div class="nav-wrapper">
           <a href="{% url 'core:index'%}" class="brand-logo">AMH</a>
@@ -33,33 +32,36 @@
           </ul>
         </div>
         </nav>
+        <div class="main">
+          {% block container %}
+          {% endblock %}
+        </div>
         
-        {% block container %}
-        {% endblock %}
-        
-        <footer class="page-footer">
-            <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Suporte</h5>
-                <p class="grey-text text-lighten-4">Entre em contato conosco agora mesmo e tire suas dúvidas.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">A Empresa</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Endereço físico da empresa</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">número para contato</a></li>
-                </ul>
+          <footer class="page-footer">
+              <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Suporte</h5>
+                  <p class="grey-text text-lighten-4">Entre em contato conosco agora mesmo e tire suas dúvidas.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">A Empresa</h5>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Endereço físico da empresa</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">número para contato</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2017 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">Site comercial da empresa</a>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2017 Copyright Text
+              <a class="grey-text text-lighten-4 right" href="#!">Site comercial da empresa</a>
+              </div>
             </div>
-          </div>
-        </footer>
+          </footer>
+        
+        
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->

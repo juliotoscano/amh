@@ -6,32 +6,32 @@
 
 {% block container %}
 
-<div class="row">
-    <div id="cardmain" class="card text-center" style="margin-top:50px;">
-      <div class="card-header">
-        <h4 class="card-title">Importar arquivos xml</h4>
-      </div>
-      <div class="card-block">
-          <div class="row">
-              <div class="col-md-12">
-                <form method="post" action="" enctype="multipart/form-data" class="horizontal-form" >
-                    {% csrf_token %}
-                    <div class="col-md-12">
-                        {% render_field form.lot class="file-field input-field" placeholder="Upload one or more files"%}
-                        {% for error in form.username.errors %}
-                        <div class="alert alert-danger" role="alert">
-                        <strong>Oh snap!</strong> {{ error }}
-                        </div>
-                        {% endfor %}
-                    </div>
-                    <div class="col-md-12" style="margin-top:30px;">
-                        <input class="btn" type="submit" value="submit">
-                    </div>
-                </form>
-              </div>
-          </div>
-      </div>
+<div class="col-md-6 offset-md-3">
+  <div id="cardmain" class="card text-center" style="margin-top:50px;">
+    <div class="card-header">
+      <h4 class="card-title">Importar arquivos xml</h4>
     </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-12">
+              <form method="post" action="" enctype="multipart/form-data" class="horizontal-form" >
+                  {% csrf_token %}
+                  <div class="col-md-12">
+                      {% render_field form.lot class="file-field input-field" placeholder="Upload one or more files"%}
+                      {% for error in form.username.errors %}
+                      <div class="alert alert-danger" role="alert">
+                      <strong>Oh snap!</strong> {{ error }}
+                      </div>
+                      {% endfor %}
+                  </div>
+                  <div class="col-md-12" style="margin-top:30px;">
+                      <input class="btn" type="submit" value="submit">
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

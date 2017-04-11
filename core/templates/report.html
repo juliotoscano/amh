@@ -4,38 +4,40 @@
 {% load widget_tweaks %}
 
 {% block container %}
+<div class="row">
+    <div class="col-3">
         <div class="card-stats">
             <div class="row">
-            <div class="col s12 m6 l3">
-                <div class="card" style="margin-top:50px;">
+            <div class="col-12">
+                <div class="card" style="margin-top:20px;">
                     <div class="card-content  green white-text">
                         <p class="card-stats-title">Base cobrados corretamente</p>
                         <h4 class="card-stats-number">19.090</h4>
                     </div>
                     <div class="card-action  green darken-2" style="text-align: right;">
-                        <p>Analisar relatorio <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></p>
+                        <p>Analisar relatorio <i class="fa fa-bar-chart fa-lg" aria-hidden="true"></i></p>
                     </div>
                 </div>
             </div>
-            <div class="col s12 m6 l3">
-                <div class="card" style="margin-top:50px;">
+            <div class="col-12">
+                <div class="card" style="margin-top:20px;">
                     <div class="card-content pink lighten-1 white-text">
                         <p class="card-stats-title">Base a menor</p>
                         <h4 class="card-stats-number">11.943.977.26</h4>
                     </div>
                     <div class="card-action  pink darken-2" style="text-align: right;">
-                        <p>Analisar relatorio <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></p>
+                        <p>Analisar relatorio <i class="fa fa-bar-chart fa-lg" aria-hidden="true"></i></p>
                     </div>
                 </div>
             </div>
-            <div class="col s12 m6 l3">
-                <div class="card" style="margin-top:50px;">
+            <div class="col-12">
+                <div class="card" style="margin-top:20px;">
                     <div class="card-content blue-grey white-text">
                         <p class="card-stats-title">Base cobrados a maior (Risco de glosa)</p>
                         <h4 class="card-stats-number">3823</h4>
                     </div>
                     <div class="card-action blue-grey darken-2" style="text-align: right;">
-                        <p>Analisar relatorio <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i></p>
+                        <p>Analisar relatorio <i class="fa fa-bar-chart fa-lg" aria-hidden="true"></i></p>
                     </div>
                 </div>
             </div>
@@ -43,6 +45,11 @@
         </div>
             
         </div>
+        
+        
+    </div>
+    <div class="col-9">
+        
         <div class="row" style="margin-bottom:150px;">
         <table id="data-table-simple" class="responsive-table display dataTable" cellspacing="0" role="grid" aria-describedby="data-table-simple_info">
             <thead>
@@ -122,8 +129,16 @@
                     <td>$433,060</td>
                 </tr></tbody>
           </table>
+          
+          <a href="#">Exportar relatório Completo <i class="fa fa-download fa-lg" aria-hidden="true"></i></a>
         
         </div>
+        
+        
+    </div>
+</div>
+        
+        
         
 
 

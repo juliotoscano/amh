@@ -22,7 +22,7 @@ def upload_file(request):
                     for chunk in f.chunks():
                         destination.write(chunk)
             process(x)
-        return render(request,'relatory.html')
+        return render(request,'report.html')
         #form = updateXML(request.POST,request.FILES)
         #if form.is_valid():
         #   listfiles = request.FILES.getlist("lot")

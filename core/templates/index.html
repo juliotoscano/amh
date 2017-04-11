@@ -4,23 +4,22 @@
 {% load widget_tweaks %}
 
 {% block container %}
-
-<div class="row">
-    <div id="cardmain" class="card text-center" style="margin-top:50px;">
-      <div class="card-header">
-        <h4 class="card-title">Auditoria Médico Hospitalar</h4>
-      </div>
-      <div class="card-block">
-          <div class="row">
-              <div class="col-md-6">
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Histórico de auditorias</button>
-              </div>
-              <div class="col-md-6">
-                  <a class="btn waves-effect waves-light" name="action" href="{% url 'file:uploadFile'%}" >Analisar Guias</a>
-              </div>
-          </div>
+<div class="col-md-6 offset-md-3">
+  <div id="cardmain" class="card text-center" style="margin-top:50px;">
+    <div class="card-header">
+      <h4 class="card-title">Auditoria Médico Hospitalar</h4>
+    </div>
+    <div class="card-block">
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn waves-effect waves-light" type="submit" name="action">Histórico de auditorias</button>
+        </div>
+        <div class="col-md-6">
+          <a class="btn waves-effect waves-light" name="action" href="{% url 'file:uploadFile'%}" >Analisar Guias</a>
+        </div>
       </div>
     </div>
+  </div>
 </div>
 
 {% endblock %}
